@@ -1,0 +1,7 @@
+yang_diukur,rata_ms,median_ms,p95_ms,fps
+ResNet-18 (model saja),70.36,72.51,75.74,14.2
+MobileNetV3-Small (model saja),15.94,15.58,20.81,62.7
+  tahap: undistort,1.57,1.32,2.35,635.4
+"  tahap: praproses (BGR->RGB, resize, normalisasi)",1.86,1.87,1.98,537.0
+  tahap: inferensi ResNet-18,70.77,72.12,78.05,14.1
+ALUR LENGKAP (undistort s.d. inferensi),74.23,75.56,81.2,13.5
