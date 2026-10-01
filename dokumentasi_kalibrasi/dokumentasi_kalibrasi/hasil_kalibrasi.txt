@@ -1,0 +1,32 @@
+HASIL KALIBRASI KAMERA (webcam USB)
+===================================
+Resolusi              : 640 x 480
+Pola papan (sudut dalam): 7 x 7 (papan 8x8 kotak)
+Foto dipakai          : 38, terdeteksi: 28, gagal: 10
+RMS reprojection error: 0.817 piksel
+
+Matriks kamera K:
+[[839.319   0.    327.867]
+ [  0.    837.589 222.744]
+ [  0.      0.      1.   ]]
+  fx = 839.32, fy = 837.59, cx = 327.87, cy = 222.74
+
+Koefisien distorsi [k1, k2, p1, p2, k3]:
+  -0.34092, 1.55415, 0.00401, 0.00405, 0.00000  (k3 dikunci = 0)
+
+Catatan metode:
+  - Deteksi sudut: cv2.findChessboardCornersSB (EXHAUSTIVE | ACCURACY)
+  - Kalibrasi: cv2.calibrateCamera dengan flag CALIB_FIX_K3
+  - Foto undistorted di folder ini memakai alpha=1 (tepi hitam terlihat)
+
+Foto yang gagal dideteksi:
+  20260929_114938_518878.jpg
+  20260929_114941_847059.jpg
+  20260929_114945_335834.jpg
+  20260929_114947_911488.jpg
+  20260929_115051_833614.jpg
+  20260929_115156_988514.jpg
+  20260929_115240_893894.jpg
+  20260929_115248_589845.jpg
+  20260929_115255_310562.jpg
+  20260929_204223_058684.jpg
