@@ -1,6 +1,6 @@
 # RET503 · Pertemuan 3 · Transfer Learning untuk Klasifikasi Sampah
 
-**Nama:** _(isi)_ · **NIM:** _(isi)_ · **Kelompok:** _(isi)_
+**Nama:** Sara Devina Pardede · **NIM:** 4222411053 · **Tim PBL:** Trash Picking Robot
 
 Klasifikasi sampah **botol** dan **tissue** dari kamera robot memakai **ResNet-18** dengan tiga mode transfer learning (*feature*, *partial*, *scratch*), lalu mengukur latensinya dibandingkan **MobileNetV3-Small**. Semua citra diambil sendiri dengan webcam USB yang sudah dikalibrasi, dan setiap citra di-*undistort* sebelum disimpan.
 
@@ -112,7 +112,7 @@ Akurasi val per epoch:
 
 ## 8. Latensi
 
-Diukur pada laptop _(isi nama prosesor, mis. AMD Ryzen ...)_, CPU 4 thread, tanpa GPU, batch 1, 100 kali pengulangan setelah 10 kali pemanasan.
+Diukur pada laptop dengan CPU AMD Ryzen (AMD64 Family 23 Model 160), PyTorch memakai 4 thread, tanpa GPU, batch 1, 100 kali pengulangan setelah 10 kali pemanasan.
 
 | Yang diukur | Rata-rata (ms) | p95 (ms) | FPS |
 |---|---|---|---|
@@ -147,5 +147,5 @@ Anggaran 15 FPS = 67 ms per frame. Alur lengkap ResNet-18 **melebihi anggaran se
 
 ## Lampiran
 
-- Dokumen desain awal (kelompok): _(tautan/nama file)_
-- Refleksi individu: _(tautan/nama file)_
+- Dokumen desain awal (kelompok): [dokumen_desain.md](dokumen_desain.md)
+- Refleksi individu: [refleksi.md](refleksi.md)
