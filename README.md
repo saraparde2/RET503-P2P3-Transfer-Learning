@@ -147,5 +147,6 @@ Anggaran 15 FPS = 67 ms per frame. Alur lengkap ResNet-18 **melebihi anggaran se
 
 ## Lampiran
 
-- Dokumen desain awal (kelompok): [dokumen_desain.md](dokumen_desain.md)
-- Refleksi individu: [refleksi.md](refleksi.md)
+- Dokumen desain awal (kelompok): [dokumen_desain PBL.md](dokumen_desain_PBL.md)
+- Refleksi individu: [refleksi pribadi dikaitkan dengan PBL.md](refleksi_pribadi_dikaitkan_dengan_PBL.md)
+)
