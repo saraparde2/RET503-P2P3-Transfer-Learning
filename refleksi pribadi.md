@@ -1,0 +1,13 @@
+# Refleksi Individu · Tugas P3 Transfer Learning
+
+**Nama:** Sara Devina Pardede · **NIM:** 4222411053
+
+**Apa yang saya kerjakan.** Saya mengkalibrasi webcam USB yang akan dipakai robot, mengambil 126 citra sampah (botol dan tissue) yang langsung di-*undistort*, membagi data menjadi train dan val, melatih ResNet-18 dengan tiga mode transfer learning, mengukur latensinya, lalu mengunggah semuanya ke GitHub.
+
+**Kendala terbesar.** Kalibrasi kamera ternyata tidak semudah menjalankan program. Dari 23 foto papan catur, awalnya hanya 4 yang terdeteksi, karena papan catur permainan yang saya pakai tidak punya tepi putih dan cahayanya tidak rata. Setelah pendeteksi diganti dan saya menambah foto di posisi pojok dan tepi frame, deteksi naik menjadi 28 foto. Saya juga belajar bahwa angka error kecil belum tentu berarti hasil bagus: saat k3 tidak dikunci, koefisien distorsinya menjadi tidak wajar walaupun program tetap berjalan. Selain itu, saya sempat salah memberi label kondisi cahaya pada beberapa foto dan salah meletakkan folder saat upload ke GitHub, sehingga belajar untuk lebih teliti memeriksa hasil sebelum lanjut.
+
+**Yang saya pelajari dari hasil.** Transfer learning jauh lebih unggul untuk data sedikit: mode *feature* dan *partial* mencapai 100% dalam 1–2 epoch, sedangkan model dari nol baru 91,7% setelah 10 epoch. Namun saya juga sadar angka 100% tidak boleh langsung dipercaya, karena botol dan tissue mudah dibedakan, data val hanya 24 citra, dan objek yang sama muncul di train dan val. Dari pengukuran latensi, saya juga melihat bahwa hampir seluruh waktu habis di model, bukan di kalibrasi, sehingga pemilihan model sangat menentukan apakah robot bisa mencapai 15 FPS.
+
+**Pendapat pribadi.** Bagian yang paling menarik sekaligus paling sulit menurut saya adalah sistem YOLO yang akan dipakai robot kami. Menarik karena YOLO tidak hanya menebak jenis sampah seperti model klasifikasi di tugas ini, tetapi juga memberi posisi objek di gambar, dan posisi itulah yang dibutuhkan robot untuk mendekat dan lengan untuk menjepit. Namun saya merasa itu akan sulit, karena datanya harus dianotasi kotak satu per satu, konsepnya lebih rumit daripada klasifikasi, dan modelnya harus tetap cukup cepat di komputer tanpa GPU. Walaupun begitu, saya ingin mempelajarinya karena itu inti dari robot PBL kami.
+
+**Yang akan saya perbaiki.** Saya ingin menambahkan kelas kertas karena itulah uji sebenarnya bagi model, mengambil data di area kerja robot dengan dudukan kamera yang sebenarnya, dan mencoba MobileNetV3-Small atau YOLO agar sistem lebih cepat dan bisa memberi posisi objek untuk lengan robot. Saya juga perlu memperdalam teori kalibrasi (matriks K, distorsi, dan reprojection error), karena pada tugas ini saya lebih banyak fokus mengejar hasil.
